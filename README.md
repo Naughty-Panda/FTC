@@ -1,2 +1,2 @@
 # FTC
-testing new features for FTC addon
+Customizable frames for FTC ESO addon
