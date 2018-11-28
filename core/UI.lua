@@ -506,7 +506,7 @@
         hidden = ( hidden == nil ) and false or hidden
 
         -- Create the backdrop
-		local tex = ( FTC.UI.Textures[tex] ~= nil ) and FTC.UI.Textures[tex] or tex
+	local tex = ( FTC.UI.Textures[tex] ~= nil ) and FTC.UI.Textures[tex] or tex
         local backdrop = _G[name]
         if ( backdrop == nil ) then backdrop = WINDOW_MANAGER:CreateControl( name , parent , CT_BACKDROP ) end
         
@@ -535,7 +535,7 @@
         if ( dims == "inherit" or #dims ~= 2 ) then dims = { parent:GetWidth() , parent:GetHeight() } end
         if ( #anchor ~= 4 and #anchor ~= 5 ) then return end
         font    = ( font == nil ) and "ZoFontGame" or font
-		color   = ( color ~= nil and #color == 4 ) and color or { FTC.Vars.FrameFontColor[1] , FTC.Vars.FrameFontColor[2] , FTC.Vars.FrameFontColor[3] , 1 }
+	color   = ( color ~= nil and #color == 4 ) and color or { FTC.Vars.FrameFontColor[1] , FTC.Vars.FrameFontColor[2] , FTC.Vars.FrameFontColor[3] , 1 }
         align   = ( align ~= nil and #align == 2 ) and align or { 1 , 1 }
         hidden  = ( hidden == nil ) and false or hidden
 		
@@ -572,7 +572,7 @@
         hidden = ( hidden == nil ) and false or hidden
         
         -- Create the status bar
-		local tex = ( FTC.UI.Textures[tex] ~= nil ) and FTC.UI.Textures[tex] or tex
+	local tex = ( FTC.UI.Textures[tex] ~= nil ) and FTC.UI.Textures[tex] or tex
         local bar = _G[name]
         if ( bar == nil ) then bar = WINDOW_MANAGER:CreateControl( name , parent , CT_STATUSBAR ) end
 
