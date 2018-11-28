@@ -2,8 +2,8 @@
 --[[----------------------------------------------------------
     UNIT FRAMES CONTROLS
   ]]----------------------------------------------------------
-  
-  --[[ 
+
+--[[ 
  * Create Unit Frames UI
  * --------------------------------
  * Called by FTC.Frames:Initialize()
@@ -33,8 +33,8 @@ function FTC.Frames:Controls()
     player.plate    = plate
 
     --Health Bar
-    local health    = FTC.UI:Backdrop(  "FTC_PlayerFrame_Health",           player,     {player:GetWidth(),player:GetHeight()*2/6},             {TOP,BOTTOM,0,0,player.plate},  {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, false ) 
-    health.bar      = FTC.UI:Statusbar( "FTC_PlayerFrame_HealthBar",        health,     {health:GetWidth()-4,health:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.UI.Textures.grainy, false )   
+    local health    = FTC.UI:Backdrop(  "FTC_PlayerFrame_Health",           player,     {player:GetWidth(),player:GetHeight()*2/6},             {TOP,BOTTOM,0,0,player.plate},  {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, false ) 
+    health.bar      = FTC.UI:Statusbar( "FTC_PlayerFrame_HealthBar",        health,     {health:GetWidth()-4,health:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.Vars.FrameTexture, false )   
     health.current  = FTC.UI:Label(     "FTC_PlayerFrame_HealthCurrent",    health,     {health:GetWidth()*2/3,health:GetHeight()},             {LEFT,LEFT,12,-2},              FTC.UI:Font(FTC.Vars.FrameFont1,FTC.Vars.FrameFontSize+2,true), nil, {0,1}, 'Health', false )       
     health.pct      = FTC.UI:Label(     "FTC_PlayerFrame_HealthPct",        health,     {health:GetWidth()*1/3,health:GetHeight()},             {RIGHT,RIGHT,-12,-2},           FTC.UI:Font(FTC.Vars.FrameFont2,FTC.Vars.FrameFontSize+2,true), nil, {2,1}, 'Pct%', false )
     health.hot      = FTC.UI:Texture(   "FTC_PlayerFrame_HealthHoT",        health,     {health.bar:GetWidth()/6,health.bar:GetWidth()/12},     {LEFT,CENTER,6,0},              FTC.UI.Textures.regenLg, true )
@@ -44,8 +44,8 @@ function FTC.Frames:Controls()
 
     
     -- Magicka Bar
-    local magicka   = FTC.UI:Backdrop(  "FTC_PlayerFrame_Magicka",          player,     {player:GetWidth(),(player:GetHeight()/6)+2},           {TOP,BOTTOM,0,-2,health},       {FTC.Vars.FrameMagickaColor[1]/5,FTC.Vars.FrameMagickaColor[2]/5,FTC.Vars.FrameMagickaColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, false )   
-    magicka.bar     = FTC.UI:Statusbar( "FTC_PlayerFrame_MagickaBar",       magicka,    {magicka:GetWidth()-4,magicka:GetHeight()-4},           {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameMagickaColor[1],FTC.Vars.FrameMagickaColor[2],FTC.Vars.FrameMagickaColor[3],1}, FTC.UI.Textures.grainy, false )
+    local magicka   = FTC.UI:Backdrop(  "FTC_PlayerFrame_Magicka",          player,     {player:GetWidth(),(player:GetHeight()/6)+2},           {TOP,BOTTOM,0,-2,health},       {FTC.Vars.FrameMagickaColor[1]/5,FTC.Vars.FrameMagickaColor[2]/5,FTC.Vars.FrameMagickaColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, false )   
+    magicka.bar     = FTC.UI:Statusbar( "FTC_PlayerFrame_MagickaBar",       magicka,    {magicka:GetWidth()-4,magicka:GetHeight()-4},           {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameMagickaColor[1],FTC.Vars.FrameMagickaColor[2],FTC.Vars.FrameMagickaColor[3],1}, FTC.Vars.FrameTexture, false )
     magicka.current = FTC.UI:Label(     "FTC_PlayerFrame_MagickaCurrent",   magicka,    {magicka:GetWidth()*2/3,magicka:GetHeight()},           {LEFT,LEFT,12,0},               FTC.UI:Font(FTC.Vars.FrameFont1,FTC.Vars.FrameFontSize,true), nil, {0,1}, 'Magicka', false )
     magicka.pct     = FTC.UI:Label(     "FTC_PlayerFrame_MagickaPct",       magicka,    {magicka:GetWidth()*1/3,magicka:GetHeight()},           {RIGHT,RIGHT,-12,0},            FTC.UI:Font(FTC.Vars.FrameFont2,FTC.Vars.FrameFontSize,true), nil, {2,1}, 'Pct%', false )
     magicka.hot     = FTC.UI:Texture(   "FTC_PlayerFrame_MagickaHoT",       magicka,    {magicka.bar:GetWidth()/6,magicka.bar:GetWidth()/12},   {LEFT,CENTER,6,0},              FTC.UI.Textures.regenSm, true )
@@ -54,8 +54,8 @@ function FTC.Frames:Controls()
     player.magicka  = magicka
 
     -- Stamina Bar
-    local stamina   = FTC.UI:Backdrop(  "FTC_PlayerFrame_Stamina",          player,     {player:GetWidth(),(player:GetHeight()/6)+2},           {TOP,BOTTOM,0,-2,magicka},      {FTC.Vars.FrameStaminaColor[1]/5,FTC.Vars.FrameStaminaColor[2]/5,FTC.Vars.FrameStaminaColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, false )   
-    stamina.bar     = FTC.UI:Statusbar( "FTC_PlayerFrame_StaminaBar",       stamina,    {stamina:GetWidth()-4,stamina:GetHeight()-4},           {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameStaminaColor[1],FTC.Vars.FrameStaminaColor[2],FTC.Vars.FrameStaminaColor[3],1}, FTC.UI.Textures.grainy, false )    
+    local stamina   = FTC.UI:Backdrop(  "FTC_PlayerFrame_Stamina",          player,     {player:GetWidth(),(player:GetHeight()/6)+2},           {TOP,BOTTOM,0,-2,magicka},      {FTC.Vars.FrameStaminaColor[1]/5,FTC.Vars.FrameStaminaColor[2]/5,FTC.Vars.FrameStaminaColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, false )   
+    stamina.bar     = FTC.UI:Statusbar( "FTC_PlayerFrame_StaminaBar",       stamina,    {stamina:GetWidth()-4,stamina:GetHeight()-4},           {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameStaminaColor[1],FTC.Vars.FrameStaminaColor[2],FTC.Vars.FrameStaminaColor[3],1}, FTC.Vars.FrameTexture, false )    
     stamina.current = FTC.UI:Label(     "FTC_PlayerFrame_StaminaCurrent",   stamina,    {stamina:GetWidth()*2/3,stamina:GetHeight()},           {LEFT,LEFT,12,0},               FTC.UI:Font(FTC.Vars.FrameFont1,FTC.Vars.FrameFontSize,true), nil, {0,1}, 'Stamina', false )      
     stamina.pct     = FTC.UI:Label(     "FTC_PlayerFrame_StaminaPct",       stamina,    {stamina:GetWidth()*1/3,stamina:GetHeight()},           {RIGHT,RIGHT,-12,0},            FTC.UI:Font(FTC.Vars.FrameFont2,FTC.Vars.FrameFontSize,true), nil, {2,1}, 'Pct%', false )
     stamina.hot     = FTC.UI:Texture(   "FTC_PlayerFrame_StaminaHoT",       stamina,    {stamina.bar:GetWidth()/6,stamina.bar:GetWidth()/12},   {LEFT,CENTER,6,0},              FTC.UI.Textures.regenSm, true )
@@ -64,15 +64,15 @@ function FTC.Frames:Controls()
     player.stamina  = stamina
     
     -- Shield Bar
-    local shield    = FTC.UI:Backdrop(  "FTC_PlayerFrame_Shield",           health,     {player:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1]/5,FTC.Vars.FrameShieldColor[2]/5,FTC.Vars.FrameShieldColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, true )   
-    shield.bar      = FTC.UI:Statusbar( "FTC_PlayerFrame_ShieldBar",        shield,     {shield:GetWidth()-4,shield:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.UI.Textures.grainy, false )
+    local shield    = FTC.UI:Backdrop(  "FTC_PlayerFrame_Shield",           health,     {player:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1]/5,FTC.Vars.FrameShieldColor[2]/5,FTC.Vars.FrameShieldColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, true )   
+    shield.bar      = FTC.UI:Statusbar( "FTC_PlayerFrame_ShieldBar",        shield,     {shield:GetWidth()-4,shield:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.Vars.FrameTexture, false )
     player.shield   = shield
     shield:SetDrawLayer(DL_OVERLAY)
       
     -- Alternate Progress Bar
     local alt       = FTC.UI:Control(   "FTC_PlayerFrame_Alt",              player,     {player:GetWidth(),math.min(player:GetHeight()/6,30)},  {TOP,BOTTOM,0,4,stamina},       false ) 
-    alt.bg          = FTC.UI:Backdrop(  "FTC_PlayerFrame_AltBG",            alt,        {alt:GetWidth()-36,alt:GetHeight()*(2/3)},              {RIGHT,RIGHT,0,0},              {0,0.1,0.1,1}, {0,0,0,1}, FTC.UI.Textures.grainy, false ) 
-    alt.bar         = FTC.UI:Statusbar( "FTC_PlayerFrame_AltBar",           alt.bg,     {alt.bg:GetWidth()-6,alt.bg:GetHeight()-8},             {LEFT,LEFT,3,0},                {0,1,1,1}, FTC.UI.Textures.grainy, false )
+    alt.bg          = FTC.UI:Backdrop(  "FTC_PlayerFrame_AltBG",            alt,        {alt:GetWidth()-36,alt:GetHeight()*(2/3)},              {RIGHT,RIGHT,0,0},              {0,0.1,0.1,1}, {0,0,0,1}, FTC.Vars.FrameTexture, false ) 
+    alt.bar         = FTC.UI:Statusbar( "FTC_PlayerFrame_AltBar",           alt.bg,     {alt.bg:GetWidth()-6,alt.bg:GetHeight()-8},             {LEFT,LEFT,3,0},                {0,1,1,1}, FTC.Vars.FrameTexture, false )
     alt.icon        = FTC.UI:Texture(   "FTC_PlayerFrame_AltIcon",          alt,        {30,30},                                                {LEFT,LEFT,0,0},                "/esoui/art/champion/champion_points_magicka_icon-hud-32.dds", false )
     player.alt      = alt
     alt.context     = 'exp'
@@ -106,8 +106,8 @@ function FTC.Frames:Controls()
     target.plate    = plate
 
     -- Health Bar
-    local health    = FTC.UI:Backdrop(  "FTC_TargetFrame_Health",           target,     {target:GetWidth(),target:GetHeight()/2},               {TOP,BOTTOM,0,0,target.plate},  {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, false ) 
-    health.bar      = FTC.UI:Statusbar( "FTC_TargetFrame_HealthBar",        health,     {health:GetWidth()-4,health:GetHeight()-4},             {LEFT,LEFT,2,0},                {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.UI.Textures.grainy, false )   
+    local health    = FTC.UI:Backdrop(  "FTC_TargetFrame_Health",           target,     {target:GetWidth(),target:GetHeight()/2},               {TOP,BOTTOM,0,0,target.plate},  {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, false ) 
+    health.bar      = FTC.UI:Statusbar( "FTC_TargetFrame_HealthBar",        health,     {health:GetWidth()-4,health:GetHeight()-4},             {LEFT,LEFT,2,0},                {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.Vars.FrameTexture, false )   
     health.current  = FTC.UI:Label(     "FTC_TargetFrame_HealthCurrent",    health,     {health:GetWidth()*2/3,health:GetHeight()},             {LEFT,LEFT,12,-2},              FTC.UI:Font(FTC.Vars.FrameFont1,FTC.Vars.FrameFontSize+2,true), nil, {0,1}, 'Health', false )       
     health.pct      = FTC.UI:Label(     "FTC_TargetFrame_HealthPct",        health,     {health:GetWidth()*1/3,health:GetHeight()},             {RIGHT,RIGHT,-12,-2},           FTC.UI:Font(FTC.Vars.FrameFont2,FTC.Vars.FrameFontSize+2,true), nil, {2,1}, 'Pct%', false )
     health.hot      = FTC.UI:Texture(   "FTC_TargetFrame_HealthHoT",        health,     {health.bar:GetWidth()/6,health.bar:GetWidth()/12},     {LEFT,CENTER,6,0},              FTC.UI.Textures.regenLg, true )
@@ -128,8 +128,8 @@ function FTC.Frames:Controls()
 	target.lplate   = lplate    
 
    -- Shield Bar
-    local shield    = FTC.UI:Backdrop(  "FTC_TargetFrame_Shield",           health,     {player:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, {0,0,0,1}, FTC.UI.Textures.grainy, true )   
-    shield.bar      = FTC.UI:Statusbar( "FTC_TargetFrame_ShieldBar",        shield,     {shield:GetWidth()-4,shield:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.UI.Textures.grainy, false )
+    local shield    = FTC.UI:Backdrop(  "FTC_TargetFrame_Shield",           health,     {player:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, {0,0,0,1}, FTC.Vars.FrameTexture, true )   
+    shield.bar      = FTC.UI:Statusbar( "FTC_TargetFrame_ShieldBar",        shield,     {shield:GetWidth()-4,shield:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.Vars.FrameTexture, false )
     target.shield   = shield
     shield:SetDrawLayer(DL_OVERLAY)
 
@@ -165,21 +165,21 @@ function FTC.Frames:Controls()
     member.plate    = plate
 
     -- Health bar
-    local health    = FTC.UI:Backdrop(  "FTC_GroupFrame"..i.."_Health",     member,     {member:GetWidth(),member:GetHeight()/2},               {TOP,BOTTOM,0,0,plate},         {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, false ) 
-    health.bar      = FTC.UI:Statusbar( "FTC_GroupFrame"..i.."_Bar",        health,     {health:GetWidth()-4,health:GetHeight()-4},             {LEFT,LEFT,2,0},                {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.UI.Textures.grainy, false )   
+    local health    = FTC.UI:Backdrop(  "FTC_GroupFrame"..i.."_Health",     member,     {member:GetWidth(),member:GetHeight()/2},               {TOP,BOTTOM,0,0,plate},         {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, false ) 
+    health.bar      = FTC.UI:Statusbar( "FTC_GroupFrame"..i.."_Bar",        health,     {health:GetWidth()-4,health:GetHeight()-4},             {LEFT,LEFT,2,0},                {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.Vars.FrameTexture, false )   
     health.current  = FTC.UI:Label(     "FTC_GroupFrame"..i.."_HealthCurrent", health,  {health:GetWidth()*2/3,health:GetHeight()},             {LEFT,LEFT,12,-2},              FTC.UI:Font(FTC.Vars.FrameFont1,FTC.Vars.GroupFontSize,true), nil, {0,1}, 'Health', false )       
     health.pct      = FTC.UI:Label(     "FTC_GroupFrame"..i.."_HealthPct",  health,     {health:GetWidth()*1/3,health:GetHeight()},             {RIGHT,RIGHT,-12,-2},           FTC.UI:Font(FTC.Vars.FrameFont2,FTC.Vars.GroupFontSize,true), nil, {2,1}, 'Pct%', false )
     member.health   = health
 
-    local shield    = FTC.UI:Backdrop(  "FTC_GroupFrame"..i.."_Shield",     health,     {member:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1]/5,FTC.Vars.FrameShieldColor[2]/5,FTC.Vars.FrameShieldColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, true )   
-    shield.bar      = FTC.UI:Statusbar( "FTC_GroupFrame"..i.."_ShieldBar",  shield,     {shield:GetWidth()-4,shield:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.UI.Textures.grainy, false )
+    local shield    = FTC.UI:Backdrop(  "FTC_GroupFrame"..i.."_Shield",     health,     {member:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1]/5,FTC.Vars.FrameShieldColor[2]/5,FTC.Vars.FrameShieldColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, true )   
+    shield.bar      = FTC.UI:Statusbar( "FTC_GroupFrame"..i.."_ShieldBar",  shield,     {shield:GetWidth()-4,shield:GetHeight()-4},             {TOPLEFT,TOPLEFT,2,2},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.Vars.FrameTexture, false )
     member.shield   = shield
     shield:SetDrawLayer(DL_OVERLAY)
 	shield.bar:SetDrawLayer(DL_OVERLAY)
 	
 	-- Ultimate
-    local ultimate    = FTC.UI:Backdrop(  "FTC_GroupFrame"..i.."_Ultimate",		health,	{member:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,health:GetHeight()/4-2},    nil, {0,0,0,1}, FTC.UI.Textures.grainy, true )   
-    ultimate.bar      = FTC.UI:Statusbar( "FTC_GroupFrame"..i.."_UltimateBar",ultimate,	{ultimate:GetWidth()-4,ultimate:GetHeight()-4},			{TOPLEFT,TOPLEFT,2,2},          nil, FTC.UI.Textures.grainy, false )
+    local ultimate    = FTC.UI:Backdrop(  "FTC_GroupFrame"..i.."_Ultimate",		health,	{member:GetWidth(),health:GetHeight()/4},               {BOTTOMLEFT,BOTTOMLEFT,0,health:GetHeight()/4-2},    nil, {0,0,0,1}, FTC.Vars.FrameTexture, true )   
+    ultimate.bar      = FTC.UI:Statusbar( "FTC_GroupFrame"..i.."_UltimateBar",ultimate,	{ultimate:GetWidth()-4,ultimate:GetHeight()-4},			{TOPLEFT,TOPLEFT,2,2},          nil, FTC.Vars.FrameTexture, false )
     member.ultimate   = ultimate
 	ultimate:SetCenterColor(0,0,0)
 	ultimate:SetDrawLayer(DL_OVERLAY)
@@ -227,22 +227,22 @@ function FTC.Frames:Controls()
     member.plate    = plate
 
     -- Health bar
-    local health    = FTC.UI:Backdrop(  "FTC_RaidFrame"..i.."_Health",     member,      {member:GetWidth(),member:GetHeight()},                 {CENTER,CENTER,0,0},            {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, false ) 
-    health.bar      = FTC.UI:Statusbar( "FTC_RaidFrame"..i.."_Bar",        health,      {health:GetWidth()-4,health:GetHeight()-4},             {LEFT,LEFT,2,0},                {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.UI.Textures.grainy, false )   
+    local health    = FTC.UI:Backdrop(  "FTC_RaidFrame"..i.."_Health",     member,      {member:GetWidth(),member:GetHeight()},                 {CENTER,CENTER,0,0},            {FTC.Vars.FrameHealthColor[1]/5,FTC.Vars.FrameHealthColor[2]/5,FTC.Vars.FrameHealthColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, false ) 
+    health.bar      = FTC.UI:Statusbar( "FTC_RaidFrame"..i.."_Bar",        health,      {health:GetWidth()-4,health:GetHeight()-4},             {LEFT,LEFT,2,0},                {FTC.Vars.FrameHealthColor[1],FTC.Vars.FrameHealthColor[2],FTC.Vars.FrameHealthColor[3],1}, FTC.Vars.FrameTexture, false )   
     health.current  = FTC.UI:Label(     "FTC_RaidFrame"..i.."_HealthCurrent", health,   {health:GetWidth()*2/3,member:GetHeight()/2},           {LEFT,LEFT,8,10},               FTC.UI:Font(FTC.Vars.FrameFont1,FTC.Vars.RaidFontSize,true), nil, {0,1}, 'H.Lk', false )       
     health.pct      = FTC.UI:Label(     "FTC_RaidFrame"..i.."_HealthPct",  health,      {health:GetWidth()*1/3,member:GetHeight()/2},           {RIGHT,RIGHT,-8,10},            FTC.UI:Font(FTC.Vars.FrameFont2,FTC.Vars.RaidFontSize,true), nil, {2,1}, 'Pct%', false )
     member.health   = health
 
 
-    local shield    = FTC.UI:Backdrop(  "FTC_RaidFrame"..i.."_Shield",     health,      {member:GetWidth()/2,8},                                {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1]/5,FTC.Vars.FrameShieldColor[2]/5,FTC.Vars.FrameShieldColor[3]/5,1}, {0,0,0,1}, FTC.UI.Textures.grainy, true )   
-    shield.bar      = FTC.UI:Statusbar( "FTC_RaidFrame"..i.."_ShieldBar",  shield,      {shield:GetWidth()-4,shield:GetHeight()-1},             {TOPLEFT,TOPLEFT,2,1},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.UI.Textures.grainy, false )
+    local shield    = FTC.UI:Backdrop(  "FTC_RaidFrame"..i.."_Shield",     health,      {member:GetWidth()/2,8},                                {BOTTOMLEFT,BOTTOMLEFT,0,0},    {FTC.Vars.FrameShieldColor[1]/5,FTC.Vars.FrameShieldColor[2]/5,FTC.Vars.FrameShieldColor[3]/5,1}, {0,0,0,1}, FTC.Vars.FrameTexture, true )   
+    shield.bar      = FTC.UI:Statusbar( "FTC_RaidFrame"..i.."_ShieldBar",  shield,      {shield:GetWidth()-4,shield:GetHeight()-1},             {TOPLEFT,TOPLEFT,2,1},          {FTC.Vars.FrameShieldColor[1],FTC.Vars.FrameShieldColor[2],FTC.Vars.FrameShieldColor[3],1}, FTC.Vars.FrameTexture, false )
     member.shield   = shield
     shield:SetDrawLayer(DL_OVERLAY)
 	shield.bar:SetDrawLayer(DL_OVERLAY)
 	
 	-- Ultimate
-    local ultimate    = FTC.UI:Backdrop(  "FTC_RaidFrame"..i.."_Ultimate",	health,		{member:GetWidth()/2,12},              					{BOTTOMRIGHT,BOTTOMRIGHT,0,0},  nil, {0,0,0,1}, FTC.UI.Textures.grainy, true )   
-    ultimate.bar      = FTC.UI:Statusbar( "FTC_RaidFrame"..i.."_UltimateBar",ultimate,	{ultimate:GetWidth()-4,ultimate:GetHeight()-1},			{TOPRIGHT,TOPRIGHT,-2,1},       nil, FTC.UI.Textures.grainy, false )
+    local ultimate    = FTC.UI:Backdrop(  "FTC_RaidFrame"..i.."_Ultimate",	health,		{member:GetWidth()/2,12},              					{BOTTOMRIGHT,BOTTOMRIGHT,0,0},  nil, {0,0,0,1}, FTC.Vars.FrameTexture, true )   
+    ultimate.bar      = FTC.UI:Statusbar( "FTC_RaidFrame"..i.."_UltimateBar",ultimate,	{ultimate:GetWidth()-4,ultimate:GetHeight()-1},			{TOPRIGHT,TOPRIGHT,-2,1},       nil, FTC.Vars.FrameTexture, false )
     member.ultimate   = ultimate
 	ultimate:SetCenterColor(0,0,0)
 	ultimate:SetDrawLayer(DL_OVERLAY)

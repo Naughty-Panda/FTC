@@ -64,6 +64,7 @@
         ["FrameTargetOpacityOut"]   = 60,    
         ["FrameFont1"]              = 'esobold',
         ["FrameFont2"]              = 'esobold',
+		["FrameTexture"]            = 'grainy',
     }
     FTC:JoinTables(FTC.Defaults,FTC.Frames.Defaults)
 
@@ -167,7 +168,7 @@
         end
         
         -- Custom Target Frame
-        if ( FTC.Vars.TargetFrame) then 
+        if ( FTC.Vars.TargetFrame ) then 
 
             -- Get the frame
             local frame     = _G['FTC_TargetFrame']
