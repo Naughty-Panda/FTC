@@ -4,23 +4,80 @@
   ]]----------------------------------------------------------
 
     -- Fonts
-    FTC.UI.Fonts        = {
-        ["meta"]        = "FoundryTacticalCombat/lib/fonts/Metamorphous.otf",
-        ["standard"]    = "EsoUi/Common/Fonts/Univers57.otf",
-        ["esobold"]     = "EsoUi/Common/Fonts/Univers67.otf",
-        ["antique"]     = "EsoUI/Common/Fonts/ProseAntiquePSMT.otf",
-        ["handwritten"] = "EsoUI/Common/Fonts/Handwritten_Bold.otf",
-        ["trajan"]      = "EsoUI/Common/Fonts/TrajanPro-Regular.otf",
-        ["futura"]      = "EsoUI/Common/Fonts/FuturaStd-CondensedLight.otf",
-        ["futurabold"]  = "EsoUI/Common/Fonts/FuturaStd-Condensed.otf",
-    }
+    FTC.UI.Fonts			= {
+		["meta"]			= "FoundryTacticalCombat/lib/fonts/Metamorphous.otf",
+		["standard"]		= "EsoUi/Common/Fonts/Univers57.otf",
+		["esobold"]			= "EsoUi/Common/Fonts/Univers67.otf",
+		["antique"]			= "EsoUI/Common/Fonts/ProseAntiquePSMT.otf",
+		["handwritten"]		= "EsoUI/Common/Fonts/Handwritten_Bold.otf",
+		["trajan"]			= "EsoUI/Common/Fonts/TrajanPro-Regular.otf",
+		["futura"]			= "EsoUI/Common/Fonts/FuturaStd-CondensedLight.otf",
+		["futurabold"]		= "EsoUI/Common/Fonts/FuturaStd-Condensed.otf",
+		["adventure"]		= "FoundryTacticalCombat/lib/fonts/adventure.ttf",
+		["anonymouspro"]	= "FoundryTacticalCombat/lib/fonts/anonymouspro.ttf",
+		["audiowide"]		= "FoundryTacticalCombat/lib/fonts/audiowide.ttf",
+		["avqest"]			= "FoundryTacticalCombat/lib/fonts/avqest.ttf",
+		["bazooka"]			= "FoundryTacticalCombat/lib/fonts/bazooka.ttf",
+		["emblem"]			= "FoundryTacticalCombat/lib/fonts/emblem.ttf",
+		["enigmatic"]		= "FoundryTacticalCombat/lib/fonts/enigmatic.ttf",
+		["frizquadratatt"]	= "FoundryTacticalCombat/lib/fonts/frizquadratatt.ttf",
+		["holyempire"]		= "FoundryTacticalCombat/lib/fonts/holyempire.ttf",
+		["morpheus"]		= "FoundryTacticalCombat/lib/fonts/morpheus.ttf",
+		["myriad"]			= "FoundryTacticalCombat/lib/fonts/myriad.ttf",
+		["nightshade"]		= "FoundryTacticalCombat/lib/fonts/nightshade.ttf",
+		["opendyslexic"]	= "FoundryTacticalCombat/lib/fonts/opendyslexic.ttf",
+		["qlassik"]			= "FoundryTacticalCombat/lib/fonts/qlassik.ttf",
+		["shojumaru"]		= "FoundryTacticalCombat/lib/fonts/shojumaru.ttf",
+		["skurri"]			= "FoundryTacticalCombat/lib/fonts/skurri.ttf",
+		["sniglet"]			= "FoundryTacticalCombat/lib/fonts/sniglet.ttf",
+		["tahoma"]			= "FoundryTacticalCombat/lib/fonts/tahoma.ttf",
+		["tradewinds"]		= "FoundryTacticalCombat/lib/fonts/tradewinds.ttf",
+		["transformers"]	= "FoundryTacticalCombat/lib/fonts/transformers.ttf",
+		["veramono"]		= "FoundryTacticalCombat/lib/fonts/veramono.ttf",
+		["verase"]			= "FoundryTacticalCombat/lib/fonts/verase.ttf",
+	}
 
     -- Textures
-    FTC.UI.Textures     = {
-        ["grainy"]      = 'FoundryTacticalCombat/lib/textures/grainy.dds',
-        ["regenLg"]     = 'FoundryTacticalCombat/lib/textures/regen_lg.dds',
-        ["regenSm"]     = 'FoundryTacticalCombat/lib/textures/regen_sm.dds',
-    }
+    FTC.UI.Textures			= {
+		["grainy"]			= 'FoundryTacticalCombat/lib/textures/grainy.dds',
+		["aluminium"]		= 'FoundryTacticalCombat/lib/textures/aluminium.dds',
+		["metal"]			= 'FoundryTacticalCombat/lib/textures/metal.dds',
+		["stone"]			= 'FoundryTacticalCombat/lib/textures/stone.dds',
+		["scratch"]			= 'FoundryTacticalCombat/lib/textures/scratch.dds',
+		["graphite"]		= 'FoundryTacticalCombat/lib/textures/graphite.dds',
+		["grid"]			= 'FoundryTacticalCombat/lib/textures/grid.dds',
+		["healbot"]			= 'FoundryTacticalCombat/lib/textures/healbot.dds',
+		["diagonals"]		= 'FoundryTacticalCombat/lib/textures/diagonals.dds',
+		["rays"]			= 'FoundryTacticalCombat/lib/textures/rays.dds',
+		["blot"]			= 'FoundryTacticalCombat/lib/textures/blot.dds',
+		["frost"]			= 'FoundryTacticalCombat/lib/textures/frost.dds',
+		["hexagon"]			= 'FoundryTacticalCombat/lib/textures/hexagon.dds',
+		["leaves"]			= 'FoundryTacticalCombat/lib/textures/leaves.dds',
+		["lightning"]		= 'FoundryTacticalCombat/lib/textures/lightning.dds',
+		["litestep"]		= 'FoundryTacticalCombat/lib/textures/litestep.dds',
+		["darkstep"]		= 'FoundryTacticalCombat/lib/textures/darkstep.dds',
+		["rocks"]			= 'FoundryTacticalCombat/lib/textures/rocks.dds',
+		["runes"]			= 'FoundryTacticalCombat/lib/textures/runes.dds',
+		["round"]			= 'FoundryTacticalCombat/lib/textures/round.dds',
+		["striped"]			= 'FoundryTacticalCombat/lib/textures/striped.dds',
+		["tukui"]			= 'FoundryTacticalCombat/lib/textures/tukui.dds',
+		["tube"]			= 'FoundryTacticalCombat/lib/textures/tube.dds',
+		["wave"]			= 'FoundryTacticalCombat/lib/textures/wave.dds',
+		["xeon"]			= 'FoundryTacticalCombat/lib/textures/xeon.dds',
+		["banto"]			= 'FoundryTacticalCombat/lib/textures/banto.dds',
+		["glaze"]			= 'FoundryTacticalCombat/lib/textures/glaze.dds',
+		["minimalist"]		= 'FoundryTacticalCombat/lib/textures/minimalist.dds',
+		["normtex"]			= 'FoundryTacticalCombat/lib/textures/normtex.dds',
+		["simple"]			= 'FoundryTacticalCombat/lib/textures/simple.dds',
+		["smooth"]			= 'FoundryTacticalCombat/lib/textures/smooth.dds',
+		["upline"]			= 'FoundryTacticalCombat/lib/textures/upline.dds',
+		["otravi"]			= 'FoundryTacticalCombat/lib/textures/otravi.dds',
+		["cilinder"]		= 'FoundryTacticalCombat/lib/textures/cilinder.dds',
+		["faded"]			= 'FoundryTacticalCombat/lib/textures/faded.dds',
+		["oldbar"]			= 'FoundryTacticalCombat/lib/textures/oldbar.dds',
+		["regenLg"]			= 'FoundryTacticalCombat/lib/textures/regen_lg.dds',
+		["regenSm"]			= 'FoundryTacticalCombat/lib/textures/regen_sm.dds',
+	}
 
     --[[ 
      * Initialize FTC UI Layer
@@ -46,6 +103,65 @@
     end
 
 --[[----------------------------------------------------------
+    TEXTURES
+  ]]----------------------------------------------------------
+
+    --[[ 
+     * Translate between texture name and tag
+     * --------------------------------
+     * Called by FTC.Menu:Controls()
+     * --------------------------------
+     ]]-- 
+    function FTC.UI:TranslateTex( texture )
+
+        -- Maintain a translation between tags and names
+        local textures = {
+		["grainy"]       = "Grainy",
+		["aluminium"]    = "Aluminium",
+		["metal"]        = "Metal",
+		["stone"]        = "Stone",
+		["scratch"]      = "Scratch",
+		["graphite"]     = "Graphite",
+		["grid"]         = "Grid",
+		["healbot"]      = "Healbot",
+		["diagonals"]    = "Diagonals",
+		["rays"]         = "Rays",
+		["blot"]         = "Blot",
+		["frost"]        = "Frost",
+		["hexagon"]      = "Hexagon",
+		["leaves"]       = "Leaves",
+		["lightning"]    = "Lightning",
+		["litestep"]     = "LiteStep",
+		["darkstep"]     = "DarkStep",
+		["rocks"]        = "Rocks",
+		["runes"]        = "Runes",
+		["round"]        = "Round",
+		["striped"]      = "Striped",
+		["tukui"]        = "Tukui",
+		["tube"]         = "Tube",
+		["wave"]         = "Wave",
+		["xeon"]         = "Xeon",
+		["banto"]        = "Banto",
+		["glaze"]        = "Glaze",
+		["minimalist"]   = "Minimalist",
+		["normtex"]      = "Normtex",
+		["simple"]       = "Simple",
+		["smooth"]       = "Smooth",
+		["upline"]       = "Upline",
+		["otravi"]       = "Otravi",
+		["cilinder"]     = "Cilinder",
+		["faded"]        = "Faded",
+		["oldbar"]       = "Oldbar",
+        }
+
+        -- Iterate through the table matching
+        for k,v in pairs(textures) do
+            if ( texture == k ) then return v
+            elseif ( texture == v ) then return k end
+        end
+    end
+
+--[[----------------------------------------------------------
     FONTS
   ]]----------------------------------------------------------
 
@@ -59,15 +175,37 @@
 
         -- Maintain a translation between tags and names
         local fonts = {
-            ['meta']        = "Metamorphous",
-            ["standard"]    = "ESO Standard",
-            ["esobold"]     = "ESO Bold",
-            ["antique"]     = "Prose Antique",
-            ["handwritten"] = "Handwritten",
-            ["trajan"]      = "Trajan Pro",
-            ["futura"]      = "Futura Standard",
-            ["futurabold"]  = "Futura Bold",
-        }
+            ['meta']        	= "Metamorphous",
+            ["standard"]    	= "ESO Standard",
+            ["esobold"]     	= "ESO Bold",
+            ["antique"]     	= "Prose Antique",
+            ["handwritten"] 	= "Handwritten",
+            ["trajan"]      	= "Trajan Pro",
+            ["futura"]      	= "Futura Standard",
+            ["futurabold"]  	= "Futura Bold",			
+			["adventure"]      	= "Adventure Normal",
+			["anonymouspro"]   	= "Anonymous Pro Bold",
+			["audiowide"]      	= "Audiowide",
+			["avqest"]         	= "AvQest",
+			["bazooka"]        	= "Bazooka",
+			["emblem"]         	= "Emblem",
+			["enigmatic"]      	= "Enigmatic",
+			["frizquadratatt"] 	= "Friz Quadrata TT",
+			["holyempire"]     	= "Holy Empire",
+			["morpheus"]       	= "Morpheus",
+			["myriad"]         	= "Myriad",
+			["nightshade"]     	= "Nightshade",
+			["opendyslexic"]   	= "OpenDyslexic",
+			["qlassik"]        	= "Qlassik",
+			["shojumaru"]      	= "Shojumaru",
+			["skurri"]         	= "Skurri",
+			["sniglet"]        	= "Sniglet",
+			["tahoma"]         	= "Tahoma",
+			["tradewinds"]     	= "Trade Winds",
+			["transformers"]   	= "Transformers",
+			["veramono"]       	= "Vera Mono",
+			["verase"]         	= "Vera Serif",
+		}
 
         -- Iterate through the table matching
         for k,v in pairs(fonts) do
@@ -368,6 +506,7 @@
         hidden = ( hidden == nil ) and false or hidden
 
         -- Create the backdrop
+		local tex = ( FTC.UI.Textures[tex] ~= nil ) and FTC.UI.Textures[tex] or tex
         local backdrop = _G[name]
         if ( backdrop == nil ) then backdrop = WINDOW_MANAGER:CreateControl( name , parent , CT_BACKDROP ) end
         
@@ -389,15 +528,17 @@
      * Label
      ]]-- 
     function FTC.UI:Label( name , parent , dims , anchor , font , color , align , text , hidden )
+	
         -- Validate arguments
         if ( name == nil or name == "" ) then return end
         parent = ( parent == nil ) and GuiRoot or parent
         if ( dims == "inherit" or #dims ~= 2 ) then dims = { parent:GetWidth() , parent:GetHeight() } end
         if ( #anchor ~= 4 and #anchor ~= 5 ) then return end
         font    = ( font == nil ) and "ZoFontGame" or font
-		color   = (color ~= nil and #color == 4) and color or {FTC.Vars.FrameFontColor[1],FTC.Vars.FrameFontColor[2],FTC.Vars.FrameFontColor[3],1}
+		color   = ( color ~= nil and #color == 4 ) and color or { FTC.Vars.FrameFontColor[1] , FTC.Vars.FrameFontColor[2] , FTC.Vars.FrameFontColor[3] , 1 }
         align   = ( align ~= nil and #align == 2 ) and align or { 1 , 1 }
-        hidden  = ( hidden == nil ) and false or hidden        
+        hidden  = ( hidden == nil ) and false or hidden
+		
         -- Create the label
         local label = _G[name]
         if ( label == nil ) then label = WINDOW_MANAGER:CreateControl( name , parent , CT_LABEL ) end
@@ -431,6 +572,7 @@
         hidden = ( hidden == nil ) and false or hidden
         
         -- Create the status bar
+		local tex = ( FTC.UI.Textures[tex] ~= nil ) and FTC.UI.Textures[tex] or tex
         local bar = _G[name]
         if ( bar == nil ) then bar = WINDOW_MANAGER:CreateControl( name , parent , CT_STATUSBAR ) end
 
